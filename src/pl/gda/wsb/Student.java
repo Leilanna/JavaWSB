@@ -13,4 +13,10 @@ public class Student extends Person {
         this.group = group;
         this.indexNumber = indexNumber;
     }
+
+    @Override
+    public String toString(){
+        return "Name and Surname: " + getName() + " " + getSurname() + ", date of birth" + getDateofBirth() + "\n "
+                + "Student index number: " + this.indexNumber + " year of study: " + this.yearOfStudy + " group: " + this.group;
+    }
 }

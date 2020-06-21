@@ -15,7 +15,13 @@ public class Footballer extends Person {
 
     public void scoreAGoal(){
         numberOfGoals++;
-        System.out.println(club+ (getSurname())+"scores!!!");
+        System.out.println(club+ " " + getSurname() +" scores!!!");
     }
 
+    @Override
+    public String toString(){
+        return "Name and surname: " + getName() + " " + getSurname() + ", date of birth: " + getDateofBirth() + "\n"+
+                "Footballer's club: " + this.club + ", position: " + this.position + "\n" +
+                "Number of goals: " + this.numberOfGoals;
+    }
 }

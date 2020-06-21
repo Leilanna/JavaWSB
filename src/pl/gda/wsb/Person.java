@@ -2,6 +2,7 @@ package pl.gda.wsb;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Person {
     private String name;
@@ -43,6 +44,11 @@ public class Person {
     }
 
     public void howManyYears(){
-        System.out.println(Duration.between(LocalDate.parse(getDateofBirth()).atStartOfDay(),LocalDate.now().atStartOfDay()).toDays());
+        System.out.println(this.getSurname() + " is " + Duration.between(LocalDate.parse(getDateofBirth()).atStartOfDay(),LocalDate.now().atStartOfDay()).toDays() / 365 + " years old") ;
+    }
+
+    @Override
+    public String toString(){
+        return "Name and surname: " + getName() + " " + getSurname() + ", date of birth " + getDateofBirth();
     }
 }
